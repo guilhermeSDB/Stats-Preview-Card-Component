@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Lexend+Deca:wght@200;300;400&display=swap');
+
+:root {
+    --inter: font-family: 'Inter', sans-serif;
+    --lexend-deca: font-family: 'Lexend Deca', sans-serif;
+    --azul-muito-escuro: hsl(233,47%,7%); /*Fundo principal*/
+    --azul-escuro:  hsl(244, 38%, 16%); /* Fundo do cartão */
+    --violeta-suave: hsl(277, 64%, 61%); /* Sotaque */
+    --branco: hsl(0, 0%, 100%); 
+    --branco-paragrafo: hsl(0, 0%, 100%, 0,75);
+    --branco-header: hsl(0, 0%, 100%, 0,6);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--branco);
+}
+
+body{
+    max-width: 100%;
+    max-height: 100%;
+    background-color: var(--azul-muito-escuro);
+}
+
+
+.card{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1100px;
+    height: 440px;
+    margin: 16rem auto;
+    border-radius: 10px;
+    background: var(--azul-escuro); 
+}
+
+.card .card_text{
+    width: 50%;
+    background: var(--azul-escuro);   
+    margin: auto 4.2rem;
+}
+
+.violet{
+    color: var(--violeta-suave);
+}
+
+.card .card_title{
+    margin-right: 2rem;
+    color: var(--branco-header);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1.3rem;
+}
+
+
+.card .card_paragraph{
+    color: var(--branco-paragrafo);
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Lexend Deca', sans-serif;     */
+    font-weight: 200;
+    font-size: 15px;
+    margin-bottom: 4rem;
+    line-height: 25px;
+}
+
+.card_title,
+.card_paragraph{
+    margin-right: 5rem;
+}
+
+.card .card_info{
+    display: flex;
+    margin-right: 3rem;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.card .card_info p{
+    margin-right: 3rem;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.card_info span{
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.card .card_image{
+    background-image: url("images/image-header-desktop.jpg");
+    filter: invert(39%) sepia(40%) saturate(717%) hue-rotate(237deg) brightness(60%) contrast(150%);
+    height: 100%;
+    width: 100%;    
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.attribution { 
+    font-family: 'Inter', sans-serif;
+    font-size: 15px; 
+    text-align: center;
+ }
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+@media screen and (max-width:375px) {    
+    .card {        
+        flex-wrap: wrap-reverse;
+        display: flex;
+        width: 340px;
+        height: 100%;
+        margin: 2rem auto;
+        background: var(--azul-escuro);
+    }
+
+    .card .card_text{
+        width: 100%;
+        background: var(--azul-escuro);   
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .card_text .card_title{
+        padding: 0px;
+        margin: 1rem;
+    }
+
+    .card_text .card_paragraph{
+        margin: 1rem 2rem;
+    }
+
+    .card_text .card_info{
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+
+    .card_text .card_info p{
+        margin: 0px;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    .card .card_image{
+        display: block;
+        background: url("images/image-header-mobile.jpg") no-repeat;
+        background-size: contain;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;    
+        border-bottom-right-radius: 0px; 
+        width: 100%;
+        height: 250px;
+    }
+
+    .card .card_info{
+        display: block;
+    }
+
+    .attribution{
+        font-size:10px;
+    }
+
+}
